@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Engine Yard Whisky Dinner, CodeConf 2011"
-date: 2011-04-27 11:19
+date: 2011-05-02 10:10
 comments: true
 categories: 
 ---
