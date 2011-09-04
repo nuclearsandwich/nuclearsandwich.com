@@ -159,3 +159,27 @@ json data of about my current sleep status. That would be fun to play with.
 > shorted out themselves!
 > 
 > Thanks for your comments guys.
+
+### hjwieland
+> Hy, thanks for your great review! Based on it I have bought a WakeMate, too.
+> I'm an Android user so it would be great to test the nightly Android client
+> builds. But I dont find the mailng list of WakeMate you mentioned? Would be
+> great if you can point me to it. Thanks in advance!
+
+### Steven! Ragnarök
+> @hjwieland it might just take them a while, They currently have one developer
+> doing all the work for both Android and Blackberry platforms. If you're
+> desperately impatient, post your email to @__nil on Twitter as he's the fine
+> fellow running the show. That seems to be the way the last few guys got in.
+> Remember that beta means beta which means occasional loss of data. If you
+> value the stats maybe you should stick with the Market versions. I'm not
+> fussed about the stats, which is why I volunteered to test.
+
+### bev
+> Excellent post, I have found sleep success with the wakemate and have shaved
+> off about an hour a night without as much as a yawn.
+> 
+> You're "What I’d like to see" rocks. I now want things to come alive just I am
+> waking up.
+> 
+> bev
