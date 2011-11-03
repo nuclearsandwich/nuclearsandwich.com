@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "CoffeeScript: An Outsider"
+title: "CoffeeScript: An Outsider Opinion"
 date: 2011-07-03 18:16
 comments: false
-categories:
+categories: Coffeescript, Javascript, programming
 ---
 
 *Thoughts on CoffeeScript from a server-side developer just getting started with
