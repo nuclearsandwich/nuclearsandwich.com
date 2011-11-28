@@ -3,7 +3,7 @@ layout: post
 title: "Why Ruby Needs Heroes"
 date: 2011-08-19 12:12
 comments: false
-categories: [Ruby, community, free software]
+categories: Ruby community free software
 ---
 
 *A reflection on the Ruby community's tendency to celebrate individual
@@ -81,7 +81,7 @@ when they may not want the attention. How many feel overly pressured by or
 undeserving of their status. When thinking on this, I am reminded of Firefly.
 (If you haven't seen it, seriously do yourself a favor and watch it.)
 
-![Jaynestown](/images/blog/jaynestown.jpg)
+<!--![Jaynestown](/images/blog/jaynestown.jpg) -->
 
 Specifically the Hero of Canton episode in which Jayne, the least noble of the
 protagonists, is remembered as a folk hero on a backwater mining colony for
