@@ -9,7 +9,7 @@ categories: programming music
 *Sightreading is an essential skill for any musician. Turns out it's pretty
 important for good software developers as well.*
 
-## What is sightreading? ##
+## What is Sightreading? ##
 
 I've been listening to a ton of [Ruby Rogues][1], so let's begin with a
 definition.
