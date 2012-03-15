@@ -2,6 +2,7 @@
 layout: post
 title: "A Minimal Friction Workflow for First-time Contributors"
 date: 2012-01-19 21:36
+published: false
 comments: true
 categories: Git,GitHub,Software
 ---
