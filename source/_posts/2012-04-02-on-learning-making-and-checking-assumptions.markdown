@@ -27,11 +27,11 @@ the better off they'll be. So my general answer was
 > "Well, what do you *think* will happen?"
 
 Queue audience groan. By asking this ad nauseum and forcing them to give me an
-answer before hitting enter. I'm contributing in a real way to building their
+answer before hitting enter, I'm contributing in a real way to building their
 mind's Ruby interpreter.
 
 If this sounds eerily like the [scientific method][0], that's because it is! We
-just condensed for tiny, one or two line experiments in Ruby.
+just condensed it for tiny, one or two line experiments in Ruby!
 
 Not Just for N00bs
 ------------------
@@ -57,14 +57,14 @@ is me!___ Would it have mattered if I'd been wrong? Not really, I would have
 learned the same lesson.
 
 The rise of [Test Driven Development][2] is actually the rise of the application
-(in a very minor and partial way) the scientific method in Software Engineering.
+(in a very minor and partial way) of the scientific method in Software Engineering.
 We're making assumptions about the goals (end-to-end tests) and design (unit
 tests) of our software and codifying them in form of our tests. These get
 challenged and verified or refuted whenever we run our tests. As our software
 changes, so do our hypotheses around it.
 
 So regardless of whether you're writing code for the first time, or a veteran
-software developer. Take the advice of John and John of They Might Be Giants,
+software developer, take the advice of John and John of They Might Be Giants,
 *you need a test*.
 
 <iframe
