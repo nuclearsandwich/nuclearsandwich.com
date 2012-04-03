@@ -95,5 +95,8 @@ disqus_show_comment_count: false
 # Google Analytics
 google_analytics_tracking_id:
 
+# Gaug.es
+gauges_id: 4f7a8451f5a1f5418400002a
+
 # Facebook Like
 facebook_like: false
