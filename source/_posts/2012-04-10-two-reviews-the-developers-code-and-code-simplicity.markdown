@@ -7,11 +7,11 @@ published: true
 categories: 
 ---
 
-***Disclaimer***: *I am affiliated with neither O'Reilly nor Pragmatic Press and
+***Disclaimer***: I am affiliated with neither O'Reilly nor Pragmatic Press and
 have received no special discounts or compensation beyond the regular sales they
 make available to the general public.
 
-That is all*
+*That is all*
 
 Recently I've read two really excellent books. [The Developer's Code][0] by Ka
 Wai Cheung, and [Code Simplicity][1] by Max Kanat-Alexander. I should start off
