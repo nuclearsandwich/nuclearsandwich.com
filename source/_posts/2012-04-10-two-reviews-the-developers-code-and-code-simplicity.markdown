@@ -17,10 +17,10 @@ Recently I've read two really excellent books. [The Developer's Code][0] by Ka
 Wai Cheung, and [Code Simplicity][1] by Max Kanat-Alexander. I should start off
 by saying that they were both great (and short!) reads and I'd recommend either
 of them to anyone. Particularly young developers still getting their first five
-years' experience__(1)__. Though I've been reading a [fair few][4] books in between
-these two, something about them struck me as similar and since It's been months
-since I read The Developer's Code and no review materialized, I figured I'd give
-some brief words about each book now
+years' experience(1). Though I've been reading a [fair few][4] books in between
+these two, something about them struck me as similar. Given that it's been
+months since I read The Developer's Code and no review materialized, I figured
+I'd give some brief words about each book now.
 
 ## The Developer's Code
 
@@ -30,9 +30,9 @@ in which we work and how it's perceived. The author seems utterly enamored with
 code generation and found a way to bring it up in nearly every chapter. I'm not
 really a fan of it at all unless it's the runtime kind of code generation.
 However, it's largely incidental to the work as a whole. Lastly, chapter 6
-discusses teaching and *every single one of you must read __it__* NOW. It's not
+discusses teaching and *every single one of you must read it now*. It's not
 even eight pages and yet he collects a handful of techniques it has taken me
-more seven years of instructing__(2)__ to be able to put to words. The book was
+more seven years of instructing(2) to be able to put to words. The book was
 worth the full price to see these words written in front of me. If you need to
 borrow it, let me know. [@sgharms](http://twitter.com/sgharms) has my copy right
 now.
@@ -44,7 +44,7 @@ half-off on [O'Reilly.com](http:///oreilly.com). I'm ever so glad I did though
 as it's been a very easy and enjoyable read. At first I felt the method of
 describing the author's observations as Laws was considerably presumptive
 behavior. However, like the laws of gravity and motion in the physics world, the
-precise wordings have genericity[<strong>(3)</strong>][3] and a timeless quality. One of the
+precise wordings have genericity[(3)][3] and a timeless quality. One of the
 stand-out aspects of this book to my mind was the complete absence of software
 testing until the very last law of the book. I was impressed by this because as
 I've [written before][5], testing is not itself an end, it is a means to the end
