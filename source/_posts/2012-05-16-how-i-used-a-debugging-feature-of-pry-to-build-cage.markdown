@@ -1,9 +1,9 @@
 ---
 layout: post
 title: How I Used a "Debugging Feature" of Pry to Build Cage
-date: 2012-04-19 14:03
+date: 2012-05-16 21:57
 comments: true
-published: false
+published: true
 categories: ruby pry cage
 ---
 
