@@ -1,4 +1,9 @@
-require 'albino'
+require 'pygments'
+require 'fileutils'
+require 'digest/md5'
+
+PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
+FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
 module HighlightCode
   def highlight(str, lang)
@@ -11,9 +16,19 @@ module HighlightCode
   end
 
   def pygments(code, lang)
-    Albino.colorize code, lang, "html", "utf-8"
+    if defined?(PYGMENTS_CACHE_DIR)
+      path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(code)}.html")
+      if File.exist?(path)
+        highlighted_code = File.read(path)
+      else
+        highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+        File.open(path, 'w') {|f| f.print(highlighted_code) }
+      end
+    else
+      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+    end
+    highlighted_code
   end
-
   def tableize_code (str, lang = '')
     table = '<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">'
     code = ''
