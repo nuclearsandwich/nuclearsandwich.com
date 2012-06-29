@@ -3,8 +3,70 @@ layout: post
 title: "A Sane Configuration Setup for Rack Applications on Heroku"
 date: 2011-06-25 9:05
 comments: true
-categories: [ ruby, Heroku ]
+categories: ruby heroku
 ---
+
+## Update 29, June 2012
+
+It's been a whole year and a bit since I first published this and it's still
+pretty much how I handle rack applications on Heroku. We did run into one
+problem which I regretfully forgot to report back at the time.  Numbers. In
+Yaml, numbers are actually numbers. In the environment, everything is a string.
+We didn't realize this until a couple months later when we introduced a limit
+constant.
+
+```
+MAX_VIDEOS_IN_TRENDING=100
+```
+
+In our local yml file everything is peaches and gravy. Well as you can imagine
+we deploy to staging and suddenly everything is borrken. 
+
+### The Error:
+```
+ArgumentError: comparison of Fixnum with String failed
+```
+
+### The Fix:
+
+```ruby
+# config/setup.rb
+# ...
+# If converting each setting to an integer, then a string leaves it equivalent
+# to its original conversion to a string then it is an integer.
+Saneconf.conf.each_key do |setting|
+  if Saneconf.conf[setting].to_i.to_s == Saneconf.conf[setting].to_s
+    Saneconf.conf[settings] = Saneconf.conf[setting].to_i
+  end
+end
+
+Saneconf.conf.freeze
+```
+
+Rather horrid isn't it? I don't know of a better way, aside from hard-coding the
+names of your settings which are meant to be numeric. If you have floating point
+values you can make a similar pass for floats. This was originally suggested by
+[@dapunster](https://twitter.com/dapunster).
+
+### New Alternatives
+
+Since writing this, I've seen two alternatives to my setup which both take the
+opposite approach and make it easier to set environment variables in test and
+development. The first and one I'd most like to try is the
+[direnv](https://github.com/zimbatm/direnv) project. It adds a function to your
+bashrc/zshrc that checks for a `.envrc` file and runs it.
+
+The second approach which applies when you're using [rvm](http://rvm.io) is to
+abuse (yes, it is an abuse) your `.rvmrc`, which is just a sourced shell script,
+to add any project specific environment variables. I really hate this approach
+but it does work.
+
+I've updated the [Git repo][0] with the example code for this setup dropping
+ActiveRecord and Resque scheduler in favor of some arbitrary numbered config
+values. If you have any feedback or suggestions, please drop me a pull request
+or email.
+
+*Original article below*
 
 ___Update:___ The Github repo I linked at the end of this article was private
 and I forgot to make it public. It is now, sorry. ~Steven!
@@ -192,6 +254,7 @@ attempt is made to change it. This way, any  of your fellow developers will know
 that whatever they're doing belongs  in your application initialization code and
 not in the middle of your  important code.   Hopefully this proves helpful, the
 example code is available on
-[GitHub](https://github.com/nuclearsandwich/saneconf).
+[GitHub][0]
 
 Good hunting, Steven!
+[0]: https://github.com/nuclearsandwich/saneconf
