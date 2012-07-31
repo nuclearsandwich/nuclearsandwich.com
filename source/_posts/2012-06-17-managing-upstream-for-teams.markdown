@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The Only Sane Way to Handle Upstream"
-date: 2012-04-27 22:02
+title: "Managing Upstream for Teams of One or More"
+date: 2012-06-17 4:30
 comments: true
 published: false
 categories: best-practices software-engineering archlinux
