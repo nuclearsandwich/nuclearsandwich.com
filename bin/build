@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+require "mustache"
+require "fileutils"
+require "github/markdown"
+
+root = File.expand_path "../..", __FILE__
+src = File.join root, "src"
+templates = File.join src, "templates"
+pages = File.join src, "pages"
+pub = File.join root, "pub"
+posts = File.join src, "posts"
+
+FileUtils.rm_r pub
+FileUtils.mkdir_p File.join pub, "blog"
+
+CONTEXT = {}
+
+%w[ fonts images stylesheets ].each do |f|
+  FileUtils.cp_r File.join(src, f), File.join(pub, f)
+end
+links = { "Home" => "/", "About" => "/about.html", "Blog" => "/blog",
+          "GitHub" => "https://github.com/nuclearsandwich"
+}
+nav = "<nav>\n  <ul>\n"
+links.each { |name, href| nav << %Q(    <li><a href="#{href}">#{name}</a></li>\n) }
+nav << "  </ul>\n</nav>"
+CONTEXT[:navigation] = nav
+index = Mustache.new
+index.template_path = templates
+index.template = File.read File.join(templates, "index.mustache")
+CONTEXT[:content]= GitHub::Markdown.to_html File.read(File.join(pages, "index.md")), :gfm
+output = index.render CONTEXT
+File.write File.join(pub, "index.html"), output
+
+Dir.new(posts).each do |p|
+  pathname = File.join posts, p
+  next unless p =~ /\.(md|markdown)$/
+  html = "#{p.split('.').first}.html"
+  CONTEXT[:content] = GitHub::Markdown.render(File.read(pathname))
+  File.write File.join(pub,"blog",html), index.render(CONTEXT)
+end

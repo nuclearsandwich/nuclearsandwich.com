@@ -1,0 +1,45 @@
+body {
+	background: url('/images/px_by_Gre3g.png') repeat black;
+	font-family: 'Bitter Regular', serif;
+}
+
+header, div.content, nav, footer {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+	background-color: #47092E;
+	color: #c1c1c1;
+	font-family: 'Sansumi Bold', sans-serif;
+	font-size: 120%;
+	padding: 2.5em 1em;
+}
+
+header h2 {
+	color: #6a6a6a;
+	font-size: 110%;
+}
+
+nav {
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	padding: 0 3em;
+	float: left;
+}
+
+div.content {
+	background-color: #dedede;
+	color: #2e2e2e;
+	padding: 1em;
+}
+
+p.copyright {
+	color: #c1c1c1;
+}
