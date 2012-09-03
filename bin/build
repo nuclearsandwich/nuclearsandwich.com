@@ -2,6 +2,8 @@
 require "mustache"
 require "fileutils"
 require "github/markdown"
+require_relative "../lib/post_repository"
+require_relative "../lib/post"
 
 root = File.expand_path "../..", __FILE__
 src = File.join root, "src"
@@ -32,10 +34,11 @@ CONTEXT[:content]= GitHub::Markdown.to_html File.read(File.join(pages, "index.md
 output = index.render CONTEXT
 File.write File.join(pub, "index.html"), output
 
-Dir.new(posts).each do |p|
-  pathname = File.join posts, p
-  next unless p =~ /\.(md|markdown)$/
-  html = "#{p.split('.').first}.html"
-  CONTEXT[:content] = GitHub::Markdown.render(File.read(pathname))
-  File.write File.join(pub,"blog",html), index.render(CONTEXT)
+post_repo = PostRepository.new posts
+
+blog_dir = File.join(pub, "blog")
+post_repo.each do |post|
+  CONTEXT[:content] = post.html_content
+  File.write File.join(blog_dir, post.html_filename), index.render(CONTEXT)
 end
+
