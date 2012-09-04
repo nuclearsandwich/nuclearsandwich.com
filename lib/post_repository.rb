@@ -1,5 +1,6 @@
 class PostRepository
-  def initialize directory
+  def initialize directory, skip_drafts = false
+    @skip_drafts = skip_drafts
     @directory = case directory
                  when String
                    Dir.new directory
@@ -17,6 +18,9 @@ class PostRepository
     end
 
     @posts.select! { |p| p }
+    if @skip_drafts
+      @posts.select! { |p| p.published? }
+    end
     @posts.reverse!
   end
 

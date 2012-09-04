@@ -71,7 +71,7 @@ Dir.new(pages).each do |page|
   File.write File.join(pub, html_filename), output
 end
 
-post_repo = PostRepository.new posts
+post_repo = PostRepository.new posts, ENV['NODRAFTS']
 
 blog_dir = File.join(pub, "blog")
 FileUtils.mkdir blog_dir

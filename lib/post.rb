@@ -43,4 +43,8 @@ class Post
   def respond_to?
     @metadata.has_key?(sym.to_s) || super
   end
+
+  def published?
+    @metadata.fetch "published", true
+  end
 end

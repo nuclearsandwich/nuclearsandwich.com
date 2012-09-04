@@ -9,8 +9,8 @@ if [ ! -d $DEPLOY_DIR ]; then
 	git clone "https://github.com/$DEPLOY_REPO.git" $DEPLOY_DIR
 fi
 
-export NODRAFTS=true
-export DESTDIR=$DEPLOY_DIR
+
+export 
 
 cd $DEPLOY_DIR
 echo '   ** Checking out deploy branch'
@@ -20,7 +20,7 @@ rm -rf bin
 
 echo '   ** Running local build'
 cd ..
-bin/build || exit 1
+DESTDIR=$DEPLOY_DIR NODRAFTS=true bin/build || exit 1
 
 echo '   ** Pushing to deploy destination'
 cd $DEPLOY_DIR
