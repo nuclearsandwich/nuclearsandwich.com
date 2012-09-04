@@ -22,7 +22,7 @@ CONTEXT = {}
 end
 
 links = { "Home" => "/", "About" => "/about.html", "Blog" => "/blog",
-          "GitHub" => "https://github.com/nuclearsandwich" }
+          "GitHub" => "https://github.com/nuclearsandwich", "Cage" => "/cage" }
 nav = "<nav>\n  <ul>\n"
 links.each { |name, href| nav << %Q(    <li><a href="#{href}">#{name}</a></li>\n) }
 nav << "  </ul>\n</nav>"
@@ -48,3 +48,7 @@ post_repo.each do |post|
   CONTEXT[:content] = post.html_content
   File.write File.join(blog_dir, post.html_filename), index.render(CONTEXT)
 end
+
+CONTEXT[:content] = post_repo.index_content
+File.write File.join(blog_dir, "index.html"), index.render(CONTEXT)
+
