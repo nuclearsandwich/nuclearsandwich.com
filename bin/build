@@ -31,9 +31,13 @@ end
 
 CONTEXT = {}
 
+File.write File.join(pub, "CNAME"), "nuclearsandwich.com"
+
 %w[ fonts images stylesheets ].each do |f|
   FileUtils.cp_r File.join(src, f), File.join(pub, f)
 end
+
+File.write File.join(pub, "stylesheets", "pygments.css"), Pygments.css(:style => 'monokai')
 
 links = { "Home" => "/", "About" => "/about.html", "Blog" => "/blog",
           "GitHub" => "https://github.com/nuclearsandwich", "Cage" => "/cage" }
