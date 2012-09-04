@@ -3,12 +3,12 @@ body {
 	font-family: 'Bitter Regular', serif;
 }
 
-header, nav, footer {
+header.page, nav, footer {
 	width: 80%;
 	margin: 0 auto;
 }
 
-header {
+header.page {
 	background-color: #47092E;
 	color: #c1c1c1;
 	font-family: 'Sansumi Bold', sans-serif;
@@ -40,8 +40,8 @@ nav ul li {
 	padding: 0 3em;
 	float: left;
 	background-color: white;
-	border-bottom: 1px solid black;
-	border-right: 1px solid black;
+	border-bottom: 1px solid #c1c1c1;
+	border-right: 1px solid #c1c1c1;
 }
 
 
@@ -56,3 +56,27 @@ div.content {
 p.copyright {
 	color: #c1c1c1;
 }
+
+pre {
+	background-color: #fefefe;
+	padding: 30px;
+	border: 3px #c1c1c1 solid;
+	border-radius: 30px;
+}
+
+pre code {
+	font-family: 'Anonymous Regular', monospace;
+}
+
+div.article-link h1 {
+	font-size: 120%;
+}
+
+div.article-link h2 {
+	font-size: 100%;
+}
+
+div.article-link {
+	margin-top: 30px;
+	border-bottom: solid 2px #c1c1c1;
+	border-right: solid 2px #c1c1c1;
