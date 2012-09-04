@@ -61,6 +61,11 @@ index.template = File.read File.join(templates, "index.mustache")
 Dir.new(pages).each do |page|
   next unless page =~ /\.md$/
   html_filename = "#{page.split('.').first}.html"
+  if page == "index.md"
+    CONTEXT[:title] = "Nuclearsandwich!" 
+  else
+    CONTEXT[:title] = page.split('.').first.capitalize
+  end
   CONTEXT[:content] = Blogdown.parser.render File.read(File.join(pages, page))
   output = index.render CONTEXT
   File.write File.join(pub, html_filename), output
@@ -71,10 +76,13 @@ post_repo = PostRepository.new posts
 blog_dir = File.join(pub, "blog")
 FileUtils.mkdir blog_dir
 post_repo.each do |post|
+  CONTEXT[:title] = post.title
   CONTEXT[:content] = post.html_content
   File.write File.join(blog_dir, post.html_filename), index.render(CONTEXT)
 end
 
+
+CONTEXT[:title] = "Latest Blog Articles"
 CONTEXT[:content] = post_repo.index_content
 File.write File.join(blog_dir, "index.html"), index.render(CONTEXT)
 
