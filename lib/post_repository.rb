@@ -14,7 +14,10 @@ class PostRepository
       next unless post_file =~ /\.(md|markdown)$/
       pathname = File.join @directory.path, post_file
       Post.new pathname
-    end.select! { |p| p }
+    end
+
+    @posts.select! { |p| p }
+    @posts.reverse!
   end
 
   def each *args, &block
