@@ -9,11 +9,25 @@ root = File.expand_path "../..", __FILE__
 src = File.join root, "src"
 templates = File.join src, "templates"
 pages = File.join src, "pages"
-pub = File.join root, "pub"
+
+pub = if ENV['DESTDIR']
+        puts ENV['DESTDIR']
+        File.join root, ENV['DESTDIR']
+      else
+        File.join root, "pub"
+      end
+
 posts = File.join src, "posts"
 
-FileUtils.rm_r pub
-FileUtils.mkdir_p File.join pub, "blog"
+if File.exists? pub
+  pubdir = Dir.new pub
+  pubdir.each do |file|
+    FileUtils.rm_r File.join(pubdir.path, file) unless [".", "..", ".git"].include? file
+  end
+else
+  Dir.mkdir pub
+end
+
 
 CONTEXT = {}
 
@@ -44,6 +58,7 @@ end
 post_repo = PostRepository.new posts
 
 blog_dir = File.join(pub, "blog")
+FileUtils.mkdir blog_dir
 post_repo.each do |post|
   CONTEXT[:content] = post.html_content
   File.write File.join(blog_dir, post.html_filename), index.render(CONTEXT)
