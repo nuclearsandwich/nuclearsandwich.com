@@ -39,8 +39,14 @@ end
 
 File.write File.join(pub, "stylesheets", "pygments.css"), Pygments.css(:style => 'monokai')
 
-links = { "Home" => "/", "About" => "/about.html", "Blog" => "/blog",
-          "GitHub" => "https://github.com/nuclearsandwich", "Cage" => "/cage" }
+links = {
+  "Home"     => "/",
+  "About"    => "/about.html",
+  "Blog"     => "/blog",
+  "GitHub"   => "https://github.com/nuclearsandwich",
+  "Twerters" => "https://twitter.com/nuclearsandwich",
+  "Cage"     => "/cage"
+}
 
 nav = "<nav>\n  <ul>\n"
 links.each { |name, href| nav << %Q(    <li><a href="#{href}">#{name}</a></li>\n) }
