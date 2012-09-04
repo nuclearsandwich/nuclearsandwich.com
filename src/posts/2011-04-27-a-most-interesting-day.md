@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Most Interesting Day"
-date: 2011-04-27 11:19
+date: 2011-04-27 11:19:00 -7
 comments: true
 categories: 
 ---

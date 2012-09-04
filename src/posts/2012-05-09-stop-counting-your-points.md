@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stop Counting Your Points"
-date: 2012-05-09 14:51
+date: 2012-05-09 14:51:00 -7
 comments: true
 published: true
 categories: university education school

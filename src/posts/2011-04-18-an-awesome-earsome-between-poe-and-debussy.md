@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An Awesome Earsome Between Poe and Debussy"
-date: 2011-04-18 04:20
+date: 2011-04-18 04:20:00 -7
 comments: true
 categories: 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sightread Your Code"
-date: 2011-11-29 09:50
+date: 2011-11-29 09:50:00 -8
 comments: false
 categories: programming music
 ---

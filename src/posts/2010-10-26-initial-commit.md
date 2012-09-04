@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Initial Commit"
-date: 2010-10-26 02:27
+date: 2010-10-26 02:27:00 -7
 comments: false
 categories:
 ---

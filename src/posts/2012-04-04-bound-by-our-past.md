@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bound by our Past"
-date: 2012-04-04 20:43
+date: 2012-04-04 20:43:00 -7
 comments: true
 categories: Rails, Ruby, Teaching
 ---

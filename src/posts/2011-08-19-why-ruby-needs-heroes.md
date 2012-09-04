@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Ruby Needs Heroes"
-date: 2011-08-19 12:12
+date: 2011-08-19 12:12:00 -7
 comments: false
 categories: Ruby community free software
 ---

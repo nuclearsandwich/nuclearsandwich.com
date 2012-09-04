@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Look at Ruby Case Expressions"
-date: 2011-09-08 08:33
+date: 2011-09-08 08:33:00 -7
 comments: true
 categories: [ Ruby, Programming ]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Managing Upstream for Teams of One or More"
-date: 2012-06-17 4:30
+date: 2012-06-17 4:30:00 -7
 comments: true
 published: false
 categories: best-practices software-engineering archlinux

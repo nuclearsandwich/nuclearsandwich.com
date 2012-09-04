@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Who I Am and Where I Am Going"
-date: 2011-11-28 13:35
+date: 2011-11-28 13:35:00 -8
 comments: false
 categories: Bio
 ---

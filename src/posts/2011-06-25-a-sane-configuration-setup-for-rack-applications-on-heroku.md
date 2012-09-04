@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Sane Configuration Setup for Rack Applications on Heroku"
-date: 2011-06-25 9:05
+date: 2011-06-25 9:05:00 -7
 comments: true
 categories: ruby heroku
 ---

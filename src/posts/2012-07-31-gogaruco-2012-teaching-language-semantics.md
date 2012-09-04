@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GoGaRuCo 2012: Teaching Language Semantics"
-date: 2012-07-31 10:12
+date: 2012-07-31 10:12:00 -7
 comments: true
 published: true
 categories: 

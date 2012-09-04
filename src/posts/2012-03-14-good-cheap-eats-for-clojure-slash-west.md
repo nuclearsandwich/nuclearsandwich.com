@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Good Eats and Drinks for Clojure/west
-date: 2012-03-14 11:19
+date: 2012-03-14 11:19:00 -7
 comments: true
 categories: 
 ---

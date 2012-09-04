@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Two Reviews: The Developer's Code and Code Simplicity"
-date: 2012-04-10 01:59
+date: 2012-04-10 01:59:00 -7
 comments: true
 published: true
 categories: 

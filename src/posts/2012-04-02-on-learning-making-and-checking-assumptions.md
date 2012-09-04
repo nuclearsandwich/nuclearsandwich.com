@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "On Learning: Making and Checking Assumptions"
-date: 2012-04-02 10:38
+date: 2012-04-02 10:38:00 -7
 comments: true
 categories: 
 ---

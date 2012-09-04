@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Try to Be Satisfied With Partial Credit and You Should Too"
-date: 2010-11-07 11:42
+date: 2010-11-07 11:42:00 -7
 comments: false
 categories: Education
 ---

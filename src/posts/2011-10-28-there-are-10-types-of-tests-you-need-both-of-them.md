@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "There Are 10 Types of Tests. You Need Both of Them"
-date: 2011-10-28 02:22
+date: 2011-10-28 02:22:00 -7
 comments: true
 categories: Ruby TDD programming
 ---

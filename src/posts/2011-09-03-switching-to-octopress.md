@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Switching to Octopress"
-date: 2011-09-03 14:31
+date: 2011-09-03 14:31:00 -7
 comments: false
 categories:
 ---

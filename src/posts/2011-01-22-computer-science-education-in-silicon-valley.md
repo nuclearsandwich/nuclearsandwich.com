@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Computer Science Education in Silicon Valley"
-date: 2011-01-22 09:11
+date: 2011-01-22 09:11:00 -8
 comments: false
 categories: Education
 ---

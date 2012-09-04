@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jeff Atwood Misses the Point"
-date: 2012-05-15 02:51
+date: 2012-05-15 02:51:00 -7
 comments: true
 published: true
 categories: 

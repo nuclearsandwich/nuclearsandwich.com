@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Santa Clara Swarm Coding
-date: 2012-03-20 21:53
+date: 2012-03-20 21:53:00 -7
 comments: true
 categories: 
 ---

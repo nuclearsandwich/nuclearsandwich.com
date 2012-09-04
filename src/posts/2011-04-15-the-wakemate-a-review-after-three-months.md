@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Wakemate: A Review After Three Months"
-date: 2011-04-15 11:11
+date: 2011-04-15 11:11:00 -7
 comments: false
 categories: [ Technology, Review ]
 ---

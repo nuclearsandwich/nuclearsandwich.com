@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why You Shouldn't Use Factories in Unit-level Tests or Specs"
-date: 2011-08-31 5:11
+date: 2011-08-31 5:11:00 -7
 comments: false
 categories: [ Programming, Ruby, Testing ]
 ---
