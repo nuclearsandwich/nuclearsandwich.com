@@ -42,7 +42,8 @@ interactive `Rack::Test`.
 
 ### Cage Version -1
 
-``` ruby Rakefile
+``` ruby
+# Rakefile
 task :client_console do
   require "faraday"
   require "pry"
@@ -69,7 +70,8 @@ such as config file loading and default values for variables. It also overloads
 some of Pry's settings to get a more interesting prompt string and suppressing
 they default `~/.pryrc` config file loading.
 
-``` ruby lib/cage/console.rb
+``` ruby
+# lib/cage/console.rb
 class Cage::Console
   def initialize config_file = nil
     configure_pry
@@ -92,7 +94,8 @@ the Faraday connection object and building the response object. I built my own
 wrapper around Faraday's response so I could improve how they are displayed as
 return values.
 
-``` ruby lib/cage/response.rb
+``` ruby
+# lib/cage/response.rb
 class Cage::Response
   ## Delegating code
   ## ...
@@ -130,5 +133,3 @@ from RubyGems using `gem install cage` or check out its [project page](/cage).
 The complete source for Cage is on
 [GitHub](https://github.com/nuclearsandwich/cage). I hope you use Pry and Cage
 to build awesome stuff!
-
-
