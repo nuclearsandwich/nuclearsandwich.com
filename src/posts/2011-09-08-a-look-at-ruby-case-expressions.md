@@ -19,7 +19,7 @@ it returns a value.
 
 In a traditional imperative style a case statement might look like:
 
-{% codeblock lang:ruby %}
+```ruby
 conditional_variable = :some_default_value
 case our_condition
 when :first
@@ -27,7 +27,7 @@ when :first
 when :then
   conditional_variable = :another
 end
-{% endcodeblock %}
+```
 
 The that isn't ideal for a number of reasons. `conditional_variable` is set
 visibly three times which as any freshman can tell you is frowned upon.
@@ -36,7 +36,7 @@ decreases readability because we aren't sure what the value will be after
 execution. Setting it so many times is also a code duplication, albeit a small
 one. We can take advantage of Ruby's case-when *expression* with this code:
 
-{% codeblock lang:ruby %}
+```ruby
 conditional_variable = case our_condition
                        when :first
                          :one_thing
@@ -45,7 +45,7 @@ conditional_variable = case our_condition
                        else
                          :some_default_value
                        end
-{% endcodeblock %}
+```
 
 Doesn't that look nicer? `conditional_variable` is only set once and the
 intent is clear, we want the value to depend on `our_condition`.
@@ -61,15 +61,17 @@ triple equals.
 
 > The double equals gives the appearance of a short link of ropes, right
 > along the sides of a red carpet where only `true` can be admitted.
-{% codeblock lang:ruby %}
+
+```ruby
 if approaching_guy == true
   puts "That necklace is classic"
 end
-{% endcodeblock %}
+```
+
 > ...
 > [This case-when statement]
 
-{% codeblock lang:ruby %}
+```ruby
 case year
 when 1894
   "Born."
@@ -78,9 +80,11 @@ when (1895..1913)
 else
   "No information about this year."
 end
-{% endcodeblock %}
+```
+
 > is identical to
-{% codeblock lang:ruby %}
+
+```ruby
 if 1894 === year
   "Born."
 elsif (1895..1913) === year
@@ -88,7 +92,8 @@ elsif (1895..1913) === year
 else
   "No information about this year."
 end
-{% endcodeblock %}
+```
+
 > The __triple equals__ is a length of velvet rope, checking values much like
 > the __double equals__. It's just: the triple equals is a longer rope and it
 > sags a bit in the middle. It's not as strict, it's a bit more flexible.
@@ -102,7 +107,8 @@ end
 
 ## My Mistake
 This is what I did which caused me to write this as penance.
-{% codeblock lang:ruby %}
+
+```ruby
 def local_tweet_object input
   tweet_hash = case input.class # the screw-up
   when String
@@ -115,7 +121,7 @@ def local_tweet_object input
   end
   LocalTweet.new tweet_hash
 end
-{% endcodeblock %}
+```
 
 This code was raising the following error.
 
@@ -128,40 +134,45 @@ should be fine for `===`." But `===` behaves specially for certain types in Ruby
 such as Classes, Arrays, and as we saw before, Ranges.
 
 For simple scalar values `===` acts like you expect.
-{% codeblock %}
+
+```ruby
 12 === 12 #=> true
 12 === 13 #=> false
 :rats === :rats #=> true
 "pens" === "pens" #=> true
 "space" === "fact" #=> false
-{% endcodeblock %}
+```
 
 And we know how `===` treats ranges
-{% codeblock %}
+
+```ruby
 (8..64) === 32 #=> true
-{% endcodeblock %}
+```
 But note that
-{% codeblock %}
+
+```ruby
 (8..64) === (8..64) #=> false
-{% endcodeblock %}
+```
 
 Suddenly!
-{% codeblock %}
+
+```ruby
 Integer === 12 #=> true!
-{% endcodeblock %}
+```
 waitaminute.. what?
 
 So Ruby can tell that `12` is a type of Integer and thus `===` can be described
 partially as an includes and typeof operator. But there are some further
 gotchas.
-{% codeblock %}
+
+```ruby
 [ 1, 2, 3 ] === 1#=> true
 [ 1, 2, 3 ] === [ 1, 2, 3 ]                         #=> true
 [ 1, 2, 3 ] === [ 1, 2 ]                            #=> false
 { :foo => :bar } === { :foo => :bar }               #=> true
 { :foo => :bar } === :foo                           #=> false
 { :foo => :bar, :baz => :qux } === { :foo => :bar } #=> false
-{% endcodeblock %}
+```
 
 `===`'s behavior isn't completely intuitive even within Ruby's standard Classes.
 Which brings us (finally) back around to my original error.
@@ -169,13 +180,15 @@ Which brings us (finally) back around to my original error.
 
 
 The fix is simple, just change
-{% codeblock %}
+
+```ruby
 case input.class
-{% endcodeblock %}
+```
 to
-{% codeblock %}
+
+```ruby
 case input
-{% endcodeblock %}
+```
 
 I posted on identi.ca a friendly notice about this easy mistake and was asked to
 provide clarification. So here, just over 24 hours late, it is. The full source

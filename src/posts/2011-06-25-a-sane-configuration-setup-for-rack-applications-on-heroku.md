@@ -111,26 +111,26 @@ using Ruby's `ENV` hash.
 
 In your code you'd get to it like this:
 
-{% codeblock lang:ruby %}
+```ruby
 #!ruby
 def controller_action
   if ENV['ARTIST'] == "Jonathan Coulton"
     @still_alive = true
   end
 end
-{% endcodeblock %}
+```
 
 But then this also has to work locally! So you need to do somethig like
 this:
 
-{% codeblock lang:ruby %}
+```ruby
 #!ruby
 def controller_action
   if (ENV['ARTIST'] || SETTINGS[:artist]) == "Jonathan Coulton"
     @still_alive = true
   end
 end
-{% endcodeblock %}
+```
 
 Alternatively, you could set up all these environment variables using a
 rake or thor task before launching your app but who wants to deal with
@@ -161,7 +161,7 @@ know that it'll start simple and grow in complexity later on. Since
 we're smart we're going to namespace the whole thing under a module.
 Namely `Saneconf` Our skeleton looks like this:
 
-{% codeblock Main Application File - app.rb %}
+```ruby
 #!ruby
 require 'rubygems' # Only needed for Ruby 1.8
 require 'bundler'
@@ -192,12 +192,12 @@ module Saneconf
     end
   end
 end
-{% endcodeblock %}
+```
 
 That looks cool and all, but what the hell is `config/setup.rb`? Answer: It's
 where the magic happens, let's go take a look:
 
-{% codeblock The Magic Happens Here - config/setup.rb %}
+```ruby
 #!ruby
 if File.exists? "config/settings.yml"
   Saneconf.conf.merge!(
@@ -234,7 +234,7 @@ if Saneconf.conf['RESQUE_SCHEDULE'].class == String
 end
 
 Saneconf.conf.freeze
-{% endcodeblock %}
+```
 
 All this does is check for the existence of a `settings.yml` and load  it's
 values into our (currently) empty configuration hash using an  in-place
