@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 DEPLOY_DIR="./deploy"
 DEPLOY_REPO='nuclearsandwich/nuclearsandwich.github.com'
@@ -7,7 +6,7 @@ DEPLOY_BRANCH='master'
 
 if [ ! -d $DEPLOY_DIR ]; then
 	echo '   ** Pulling deploy repository'
-	git clone "https://github.com/$DEPLOY_REPO.git"
+	git clone "https://github.com/$DEPLOY_REPO.git" $DEPLOY_DIR
 fi
 
 export NODRAFTS=true
