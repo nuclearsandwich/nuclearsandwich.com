@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require "mustache"
 require "fileutils"
-require "github/markdown"
+require_relative "../lib/blogdown"
 require_relative "../lib/post_repository"
 require_relative "../lib/post"
 
@@ -37,6 +37,7 @@ end
 
 links = { "Home" => "/", "About" => "/about.html", "Blog" => "/blog",
           "GitHub" => "https://github.com/nuclearsandwich", "Cage" => "/cage" }
+
 nav = "<nav>\n  <ul>\n"
 links.each { |name, href| nav << %Q(    <li><a href="#{href}">#{name}</a></li>\n) }
 nav << "  </ul>\n</nav>"
@@ -50,7 +51,7 @@ index.template = File.read File.join(templates, "index.mustache")
 Dir.new(pages).each do |page|
   next unless page =~ /\.md$/
   html_filename = "#{page.split('.').first}.html"
-  CONTEXT[:content]= GitHub::Markdown.render File.read(File.join(pages, page))
+  CONTEXT[:content] = Blogdown.parser.render File.read(File.join(pages, page))
   output = index.render CONTEXT
   File.write File.join(pub, html_filename), output
 end

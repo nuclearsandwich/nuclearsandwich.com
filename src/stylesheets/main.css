@@ -53,18 +53,29 @@ div.content {
 	width: 75%;
 }
 
+p a {
+	color: #2e2e2e;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+p a:hover {
+	text-decoration: underline;
+}
+
+p a:visited {
+	color: #6a6a6a;
+}
+
 p.copyright {
 	color: #c1c1c1;
 }
 
 pre {
-	background-color: #fefefe;
+	background-color: #181818;
 	padding: 30px;
-	border: 3px #c1c1c1 solid;
+	border: 3px #6a6a6a solid;
 	border-radius: 30px;
-}
-
-pre code {
 	font-family: 'Anonymous Regular', monospace;
 }
 

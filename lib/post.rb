@@ -1,5 +1,5 @@
 require "yaml"
-require "github/markdown"
+require_relative "blogdown"
 
 class Post
   attr_reader :filename, :content, :metadata
@@ -24,7 +24,7 @@ class Post
     <h1>#{title}</h1>
     <h2>published: #{date.strftime "%e %b %Y %H:%m:%S%p"}</h2>
   </header>
-  #{GitHub::Markdown.render @content}
+  #{Blogdown.parser.render @content}
 </article>
     HTML
   end
