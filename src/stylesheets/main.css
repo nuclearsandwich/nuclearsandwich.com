@@ -3,7 +3,7 @@ body {
 	font-family: 'Bitter Regular', serif;
 }
 
-header, div.content, nav, footer {
+header, nav, footer {
 	width: 80%;
 	margin: 0 auto;
 }
@@ -46,9 +46,11 @@ nav ul li {
 
 
 div.content {
+	margin: auto;
 	background-color: #dedede;
 	color: #2e2e2e;
-	padding: 1em;
+	padding: 4em;
+	width: 75%;
 }
 
 p.copyright {

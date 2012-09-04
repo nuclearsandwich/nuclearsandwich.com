@@ -20,19 +20,26 @@ CONTEXT = {}
 %w[ fonts images stylesheets ].each do |f|
   FileUtils.cp_r File.join(src, f), File.join(pub, f)
 end
+
 links = { "Home" => "/", "About" => "/about.html", "Blog" => "/blog",
-          "GitHub" => "https://github.com/nuclearsandwich"
-}
+          "GitHub" => "https://github.com/nuclearsandwich" }
 nav = "<nav>\n  <ul>\n"
 links.each { |name, href| nav << %Q(    <li><a href="#{href}">#{name}</a></li>\n) }
 nav << "  </ul>\n</nav>"
+
 CONTEXT[:navigation] = nav
+
 index = Mustache.new
 index.template_path = templates
 index.template = File.read File.join(templates, "index.mustache")
-CONTEXT[:content]= GitHub::Markdown.to_html File.read(File.join(pages, "index.md")), :gfm
-output = index.render CONTEXT
-File.write File.join(pub, "index.html"), output
+
+Dir.new(pages).each do |page|
+  next unless page =~ /\.md$/
+  html_filename = "#{page.split('.').first}.html"
+  CONTEXT[:content]= GitHub::Markdown.render File.read(File.join(pages, page))
+  output = index.render CONTEXT
+  File.write File.join(pub, html_filename), output
+end
 
 post_repo = PostRepository.new posts
 
@@ -41,4 +48,3 @@ post_repo.each do |post|
   CONTEXT[:content] = post.html_content
   File.write File.join(blog_dir, post.html_filename), index.render(CONTEXT)
 end
-
