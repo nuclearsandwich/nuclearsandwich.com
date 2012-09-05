@@ -22,7 +22,7 @@ class Post
 <article>
   <header>
     <h1>#{title}</h1>
-    <h2>published: #{date.strftime "%e %b %Y %H:%m:%S%p"}</h2>
+    <h2>published: #{date.strftime "%e %b %Y %I:%m:%S%p"}</h2>
   </header>
   #{Blogdown.parser.render @content}
 </article>
