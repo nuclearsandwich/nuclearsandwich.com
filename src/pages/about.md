@@ -39,3 +39,4 @@ Marry, F*ck, Kill: Programming Languages Edition
 
 - Java
 - C++
+- Pascal
