@@ -1,14 +1,13 @@
 What I tell other people about me
 ---------------------------------
 
-During the school year, Steven! is a student of computer science, mathematics,
-and latte art, and this past summer he interned at GitHub. Year-round he's a
-passionate Ruby hacker who loves contributing to open source projects like
-Faraday, Rubinius and Archlinux. He teaches and contributes to KidsRuby,
-CoderDojo, and Rails Girls and is also on the core team for RailsBridge. He has
-spent more than a few evenings scrabbling to get out of the Bronze League in
-StarCraft II. Most importantly, Steven! is a dedicated engineer with a passion
-for creating beautiful things.
+On any given weekday Steven! is a GitHub Supportocat and a student of computer
+science, mathematics, and latte art. When Friday rolls around he's passionate
+Ruby hacker who loves contributing to open source projects.  He teaches and
+contributes to KidsRuby, CoderDojo, and RailsGirls and is also on the core team
+for RailsBridge. He has spent more than a few evenings scrabbling to get out of
+the Bronze League in StarCraft II. Most importantly, Steven! is a dedicated
+engineer with a passion for creating beautiful things.
 
 What I think about me
 ---------------------
