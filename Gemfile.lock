@@ -2,25 +2,20 @@ GEM
   remote: http://rubygems.org/
   specs:
     blankslate (2.1.2.4)
-    daemons (1.1.9)
-    eventmachine (0.12.10)
     ffi (1.0.11)
     listen (0.5.0)
     mustache (0.99.4)
     pygments.rb (0.2.13)
       rubypython (~> 0.5.3)
-    rack (1.4.1)
     rb-fsevent (0.9.1)
+    rb-inotify (0.8.8)
+      ffi (>= 0.5.0)
     redcarpet (2.1.1)
     rerun (0.7.1)
       listen
     rubypython (0.5.3)
       blankslate (>= 2.1.2.3)
       ffi (~> 1.0.7)
-    thin (1.4.1)
-      daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
-      rack (>= 1.0.0)
 
 PLATFORMS
   ruby
@@ -29,6 +24,6 @@ DEPENDENCIES
   mustache
   pygments.rb
   rb-fsevent
+  rb-inotify (~> 0.8.8)
   redcarpet
   rerun
-  thin

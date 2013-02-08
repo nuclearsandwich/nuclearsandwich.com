@@ -1,2 +1,14 @@
-#!/bin/bash
-rackup
+#!/usr/bin/env ruby
+
+require 'webrick'
+
+root = File.expand_path './pub'
+server = WEBrick::HTTPServer.new Port: ENV['PORT'] || 8081, DocumentRoot: root
+
+trap 'INT' do
+  server.shutdown
+  exit 0
+end
+
+puts '^C murders me!'
+server.start
