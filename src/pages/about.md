@@ -15,27 +15,30 @@ What I think about me
 I don't know what I'm doing, but I feel like I do when I teach other people what
 little I know. So I do that as much as I possibly can.
 
-Marry, F*ck, Kill: Programming Languages Edition
-------------------------------------------------
+Programming Languages...
+------------------------
 
-### Marry ###
+### I could spend the rest of my life with ###
 
-- Ruby
-- Clojure
 - C
+- Clojure
+- CoffeeScript
+- Lua
+- Ruby
 
-### F*ck ###
+### I enjoy spending time with ###
 
-- Julia
-- Go
-- Smalltalk
-- Scheme
-- Io
 - C#
+- Go
+- Io
+- JavaScript
+- Julia
 - Mirah
+- Scheme
+- Smalltalk
 
-### Kill ###
+### I could stand never to see again ###
 
-- Java
 - C++
+- Java
 - Pascal
