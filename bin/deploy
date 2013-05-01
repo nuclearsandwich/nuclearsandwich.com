@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEPLOY_DIR="./deploy"
-DEPLOY_REPO='nuclearsandwich/nuclearsandwich.github.com'
+DEPLOY_REPO='nuclearsandwich/nuclearsandwich.github.io'
 DEPLOY_BRANCH='master'
 
 if [ ! -d $DEPLOY_DIR ]; then
