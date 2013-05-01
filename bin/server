@@ -3,7 +3,7 @@
 require 'webrick'
 
 root = File.expand_path './pub'
-server = WEBrick::HTTPServer.new Port: ENV['PORT'] || 8081, DocumentRoot: root
+server = WEBrick::HTTPServer.new Port: ENV['PORT'] || 10800, DocumentRoot: root
 
 trap 'INT' do
   server.shutdown
