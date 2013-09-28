@@ -10,4 +10,3 @@ Maybe you just want to see my
 
 [1]: /blog/2013-02-06-i-have-learned-a-css.html
 
-Either way, this is me. Expect whatever.
