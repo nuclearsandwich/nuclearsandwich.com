@@ -4,7 +4,9 @@ gem "mustache"
 gem "redcarpet"
 gem "pygments.rb"
 gem "rerun"
-gem "rb-fsevent"
-if RUBY_PLATFORM =~ /linux/
+case RUBY_PLATFORM
+when /linux/i
   gem "rb-inotify", "~>0.8.8"
+when /darwin/i
+  gem "rb-fsevent"
 end
