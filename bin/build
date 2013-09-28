@@ -44,7 +44,7 @@ links = {
   "About"    => "/about.html",
   "Blog"     => "/blog",
   "GitHub"   => "https://github.com/nuclearsandwich",
-  "Twerters" => "https://twitter.com/nuclearsandwich",
+  "Twitter" => "https://twitter.com/nuclearsandwich",
   "Cage"     => "/cage"
 }
 
