@@ -21,23 +21,23 @@ Programming Languages...
 ### I could spend the rest of my life with ###
 
 - C
-- Clojure
-- CoffeeScript
 - Lua
 - Ruby
+- CoffeeScript
+- Clojure
 
 ### I enjoy spending time with ###
 
 - C#
-- Go
+- Scheme
 - Io
 - JavaScript
 - Julia
 - Mirah
-- Scheme
+- Go
 - Smalltalk
 
-### I could stand never to see again ###
+### I avoid at parties ###
 
 - C++
 - Java
