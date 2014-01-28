@@ -31,7 +31,7 @@ end
 
 CONTEXT = {}
 
-File.write File.join(pub, "CNAME"), "nuclearsandwich.com"
+File.write File.join(pub, "CNAME"), "www.nuclearsandwich.com"
 
 %w[ fonts images stylesheets ].each do |f|
   FileUtils.cp_r File.join(src, f), File.join(pub, f)
