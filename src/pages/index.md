@@ -1,12 +1,13 @@
+# Hey Stranger
+
 I play games, read books, study math and computer science, and
 occasionally I find the time to write software.
 
-If you don't know who I am, fix that [here](/about.html).
+If you don't know who I am, [look at this](/about.html).
 
-I recently [Learned a CSS][1].
+I recently [haven't done a lot of writing lately][1].
 
-Maybe you just want to see my
-[code](https://github.com/nuclearsandwich).
+Maybe you're just here for [code](https://github.com/nuclearsandwich).
 
-[1]: /blog/2013-02-06-i-have-learned-a-css.html
+[1]: /blog/2014-01-27-what-i-haven-t-written-about.html
 
