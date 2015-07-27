@@ -1,7 +1,7 @@
 This web page is primarily my own creation. However, I stand on the shoulders of
 giants and would give credit to a few of them.
 
-- The fonts used on this site are Fauna One by Eduardo Tunni, Quicksand by Andrew Paglinawan, and Anonymous Pro by Mark Simonson
+- The fonts used on this site are Sanchez by Daniel Hernandez, Anonymous Pro by Mark Simonson, and Lato by Łukasz Dziedzic.
 
 - [Pygments][] (via [pygments.rb][]) is used for code highlighting along with
 the Monokai color scheme realized in CSS by Pygments.
