@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require "bundler"
+Bundler.setup
+
 require 'webrick'
 
 root = File.expand_path './pub'

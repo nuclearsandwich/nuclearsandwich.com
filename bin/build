@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require "bundler"
+Bundler.setup
 require "mustache"
 require "fileutils"
 require_relative "../lib/blogdown"
@@ -33,7 +35,7 @@ CONTEXT = {}
 
 File.write File.join(pub, "CNAME"), "www.nuclearsandwich.com"
 
-%w[ fonts images stylesheets ].each do |f|
+%w[ images stylesheets ].each do |f|
   FileUtils.cp_r File.join(src, f), File.join(pub, f)
 end
 
@@ -45,7 +47,6 @@ links = {
   "Blog"     => "/blog",
   "GitHub"   => "https://github.com/nuclearsandwich",
   "Twitter" => "https://twitter.com/nuclearsandwich",
-  "Cage"     => "/cage"
 }
 
 nav = "<nav>\n  <ul>\n"
@@ -62,7 +63,7 @@ Dir.new(pages).each do |page|
   next unless page =~ /\.md$/
   html_filename = "#{page.split('.').first}.html"
   if page == "index.md"
-    CONTEXT[:title] = "Nuclearsandwich!" 
+    CONTEXT[:title] = "Nuclearsandwich!"
   else
     CONTEXT[:title] = page.split('.').first.capitalize
   end
@@ -85,4 +86,3 @@ end
 CONTEXT[:title] = "Latest Blog Articles"
 CONTEXT[:content] = post_repo.index_content
 File.write File.join(blog_dir, "index.html"), index.render(CONTEXT)
-

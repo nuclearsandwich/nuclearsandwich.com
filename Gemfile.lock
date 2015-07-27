@@ -7,7 +7,8 @@ GEM
     mustache (0.99.4)
     pygments.rb (0.2.13)
       rubypython (~> 0.5.3)
-    rb-fsevent (0.9.3)
+    rb-inotify (0.8.8)
+      ffi (>= 0.5.0)
     redcarpet (2.1.1)
     rerun (0.7.1)
       listen
@@ -21,6 +22,9 @@ PLATFORMS
 DEPENDENCIES
   mustache
   pygments.rb
-  rb-fsevent
+  rb-inotify (~> 0.8.8)
   redcarpet
   rerun
+
+BUNDLED WITH
+   1.10.3
