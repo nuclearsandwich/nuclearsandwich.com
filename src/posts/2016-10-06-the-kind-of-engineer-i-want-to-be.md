@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The kind of engineer I want to be
-date: 2016-10-06 10:45:00 -04:00
+date: 2016-10-06 10:53:00 -04:00
 published: true
 categories: []
 ---
@@ -15,7 +15,6 @@ The kind of engineer I want to be is also the kind of programmer I want to be, b
 
 ## I'll be collaborative.
 
-This is one I'm proud to say I have a lot of experience with already.
 Collaboration has been a key aspect of computing for me since childhood days making Pong clones with my dad.
 I enjoy pair programming although it's been hard finding great tools for remote pairing and even harder coordinating across timezones and work schedules, so it's not the only trick in my bag.
 I think pairing is most effective when there's a concrete objective and a flexible but still explicit time box.
@@ -23,9 +22,6 @@ Code review's best results come about when it is treated as an asynchronous pair
 
 Collaboration doesn't stop with my fellow engineers.
 Building software collaboratively mandates empathy and respect for a project's writers, testers, administrative staff, and audience.
-There is a tendency among software professionals to assume that passing proficiency with a new discipline will come as easily as it does with a new programming language or environment.
-The reality is that anyone who has successfully built and deployed an application in any language has a specialist understanding of _software_.. not any other discipline.
-I've certainly been guilty of that hubris in the past, and I still catch it nudging up occasionally, but working closely with true talents in other disciplines put the notion that I could do what they do as readily as they do it safely to bed.
 
 There's no replacement for working with people who are good at what they do.
 
@@ -81,9 +77,15 @@ This format highlights the process improvements or additional testing necessary 
 I like knowing what's going on.
 If there's an aspect of a system I'm unfamiliar with but want or need to change, I like to start by documenting what it does currently.
 This is a good checksum of both my understanding and the system behavior directly.
+I don't like the mindset of just rebooting machines until they work.
+If a problem occurs twice it's "recurring" and I want to establish why.
+I debug and trouble shoot by continuously forming hypotheses that can be quickly verified or refuted rather than assuming that my instinct about a problem is immediately correct.
 
-I also really enjoy picking up something new.
+I also really enjoy picking up new things.
 It's impossible to pretend I have any idea what it's like to be a beginner again, but picking up new tools or languages gives me a small taste of that and I find it really healthy and humbling.
+
+Being an involved participant in all aspects of an organization is important to me.
+That isn't to say I'll take on everyone's job; rather, I'll seek to appreciate the skill with which they perform their duties.
 
 ## I'll be a mentor and a learner
 
