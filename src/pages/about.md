@@ -8,5 +8,5 @@ I was an early mentor and curriculum author for Silicon Valley Coder Dojo and ho
 I had the privilege and pleasure of speaking at the 2012 Golden Gate Ruby Conference about peeling back the syntactic sugar of Ruby to expose newcomers to the language's internals.
 If you're interested you can check out that talk: [Sugar-Free Ruby](https://www.youtube.com/watch?v=SNbBC2pSiVw) on YouTube.
 
-If you're looking for a dedicated and empathy-driven software engineer or consulting from Git and GitHub specialist I am currently available for hire.
+If you're looking for a dedicated and empathy-driven software engineer or consulting from a Git and GitHub specialist I am currently available for hire.
 
